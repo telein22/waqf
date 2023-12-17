@@ -1,0 +1,23 @@
+{
+    "name": "twiplo/brd",
+    "authors": [
+        {
+            "name": "Akash",
+            "email": "boseakash7@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5",
+        "whichbrowser/parser": "^2.1",
+        "guzzlehttp/guzzle": "^7.0",
+        "pusher/pusher-php-server": "^7.2",
+        "aws/aws-sdk-php": "^3.273",
+        "dompdf/dompdf": "^2.0",
+        "spatie/pdf-to-image": "^1.2",
+        "bacon/bacon-qr-code": "^2.0",
+        "chillerlan/php-qrcode": "^4.3",
+        "mpdf/mpdf": "^8.0.4",
+        "kreait/firebase-php": "^5.26",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

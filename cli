@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+include 'index.php';
+
+if ( !isset($argv[1]) ) exit("Please enter a command\n");
+
+// define system commands
+$systemCommands = [
+    'controller' => '\System\Commands\RunController'
+];
+
+// Initialize a new command
+$commands = $configs->commands;
+$commands = $commands ? array_merge($commands, $systemCommands) : $systemCommands;
+
+if ( !isset($commands[$argv[1]]) ) exit("Sorry command: {$argv[1]} not found.\n");
+
+unset($argv[0]);
+
+// else run the command
+$command = new $commands[$argv[1]];
+
+if ( ! $command instanceof \System\Core\CLICommand ) exit("`{$argv[1]}` is not a valid command.\n");
+
+call_user_func(array($command, 'run'), $argv);

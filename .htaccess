@@ -1,0 +1,15 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+
+# Header Set Connection close
+
+#The following line means of the ullash_user_files directory is been requested, do nothing.
+RewriteCond %{REQUEST_URI} !^/index\.php
+RewriteCond %{REQUEST_FILENAME} (/|\.php|\.html|\.htm|\.xml|\.feed|robots\.txt|error\.txt|\.raw|/[^.]*)$  [NC]
+RewriteRule (.*) index.php
+
+# Exclude .well-known directory from rewriting rules
+RewriteRule ^\.well-known/ - [L]
+
+# Prevent access to specific files
+RewriteRule ^(\.|.user.ini|.gitignore.txt|.env|README|LICENSE|CHANGELOG|composer\.(json|lock)) - [F]

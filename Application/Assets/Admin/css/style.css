@@ -1,0 +1,229 @@
+.custom-flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+@media all and (max-width: 768px) {
+    .mobile-mt-3 {
+        margin-top: 20px !important;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+    }
+
+    .custom-flex-space {
+        flex-direction: column;
+    }
+
+    .filter-wrapper button {
+        margin-top: 10px;
+    }
+}
+
+.feed-frame {
+    width: 100% !important;
+    height: 400px;
+}
+
+.error {
+    font-weight: bold;
+    color: #b71111;
+}
+
+.admin-logo {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+}
+
+.iq-card-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.iq-card-header .iq-header-title {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.message-container {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.message-container:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.bg-primary,
+.badge-primary {
+    color: white !important;
+    background: #6153e6 !important;
+}
+
+.nav-item.active .sidebar-item {
+    background-color: rgba(255, 255, 255, .1) !important;
+    color: #fff !important;
+}
+
+.order-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-details-header {
+    font-size: 24px !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bg-color1 {
+    background-color: #ad6666f8;
+    color: white;
+}
+
+.bg-color2 {
+    background-color: #86cc92;
+    color: white;
+}
+
+.bg-color3 {
+    background-color: #8e99ca;
+    color: white;
+}
+
+.bg-color4 {
+    background-color: #b464bb;
+    color: white;
+}
+
+.bg-color5 {
+    background-color: #b64f93;
+    color: white;
+}
+
+.layout-fixed .wrapper .sidebar {
+    height: calc(100vh - (80px + 1px));
+}
+
+.btn-primary {
+    background-color: #3f4aaa !important;
+    border-color: #3f4aaa !important;
+}
+
+.nav-item.active .sidebar-item {
+    color: #3f4aaa !important;
+}
+
+.primary-btn i {
+    color: #3f4aaa !important;
+}
+
+.btn i {
+    color: #3f4aaa !important;
+}
+
+.rounded-circle-charity {
+    border-radius: 50%;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+
+
+/* CSS by Zahoor */
+.lang-ar.layout-fixed .main-sidebar{
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+@media screen and (min-width: 768px) {
+    body.lang-ar:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper,
+    body.lang-ar:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer,
+    body.lang-ar:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header{
+        margin-left: 0;
+        margin-right: 250px;
+    }
+}
+.lang-ar .navbar-nav{
+    padding-inline-start: 0;
+}
+.lang-ar .small-box .icon>i{
+    left: 15px;
+    right: auto;
+}
+.lang-ar .small-box>.inner{
+    text-align: right;
+}
+.lang-ar .nav-sidebar{
+    padding-inline-start: 0;
+}
+.lang-ar .user-panel .image{
+    padding-right: 15px;
+}
+.lang-ar .content h3{
+    text-align: right;
+}
+.lang-ar .filter-right{
+    text-align: right;
+}
+.lang-ar div.dataTables_wrapper div.dataTables_filter{
+    text-align: left;
+}
+.lang-ar table.table-bordered.dataTable{
+    text-align: right;
+}
+.lang-ar div{
+    text-align: right;
+}
+.lang-ar label:not(.form-check-label):not(.custom-file-label){
+    margin-left: 10px;
+}
+.lang-ar .modal-header .close, .modal-header .mailbox-attachment-close{
+    margin: -1rem;
+}
+.lang-ar .nav-sidebar .nav-link>.right,
+.lang-ar .nav-sidebar .nav-link>p>.right{
+    right: auto;
+    left: 5px;
+}
+.lang-ar .sidebar .nav-link p{
+    white-space: nowrap;
+}
+.lang-ar .close, .mailbox-attachment-close{
+    float: left;
+}
+.lang-ar .modal-footer{
+    justify-content: flex-start;
+}
+
+.lang-ar.sidebar-collapse .main-sidebar, .sidebar-collapse .main-sidebar::before {
+    margin-left: auto;
+    margin-right: -250px;
+}
+
+.form-group.required label:after {
+    content:"*";
+    color:red;
+}
+
+.billing .col-md-6:nth-of-type(1) {
+    display: none;
+}
+
+.billing .dataTables_filter {
+    width: 50%;
+    text-align: right;
+}
