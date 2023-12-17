@@ -42,11 +42,11 @@ $lang = Model::get('\Application\Models\Language');
     <tr style="height: 150px;">
         <td style=" display: flex; justify-content: space-evenly; align-items: center;">
                 <span style="text-align: center;">
-                    <h2 style="margin: 5px 0;font-size: 25px; font-weight: 400; color: #434CA2;">جلسة بعنوان</h2>
+                    <h2 style="margin: 5px 0;font-size: 25px; font-weight: 400; color: var(--iq-primary);">جلسة بعنوان</h2>
                     <h1 style="
                     line-height: 45px;
-                margin: 5px 0;font-size: 40px; font-weight: bold; color: #434CA2;">" <?= $workshop['name'] ?> "</h1>
-                    <h2 style="margin: 5px 0;font-size: 25px; font-weight: 400; color: #434CA2;"> <?= $user['name'] ?></h2>
+                margin: 5px 0;font-size: 40px; font-weight: bold; color: var(--iq-primary);">" <?= $workshop['name'] ?> "</h1>
+                    <h2 style="margin: 5px 0;font-size: 25px; font-weight: 400; color: var(--iq-primary);"> <?= $user['name'] ?></h2>
 
                     <?php
                     $userSM = Model::get(UserSettings::class);
@@ -70,7 +70,7 @@ $lang = Model::get('\Application\Models\Language');
         <td>
 
             <p
-                style="width: 85% ;color: #434CA2;  ; font-size: 18px;  line-height: 35px;margin: 35px auto ; text-align: center;">
+                style="width: 85% ;color: var(--iq-primary);  ; font-size: 18px;  line-height: 35px;margin: 35px auto ; text-align: center;">
                 <?= $workshop['desc'] ?>
 
             </p>
@@ -85,16 +85,16 @@ $lang = Model::get('\Application\Models\Language');
 
                     <td style="width:32%; padding-inline-start: 4%;">
                         <p style="display: flex;align-items: center;">
-                            <img src="<?= URL::asset('/Application/Assets/business_card_and_poster/calendar (1).png')?>" alt="" style="width: 40px;margin-inline-end: 10px;height: 40px; padding-inline-end: 10px;  border-left: 2px solid #434CA2;">
+                            <img src="<?= URL::asset('/Application/Assets/business_card_and_poster/calendar (1).png')?>" alt="" style="width: 40px;margin-inline-end: 10px;height: 40px; padding-inline-end: 10px;  border-left: 2px solid var(--iq-primary);">
                             <span
-                                style="color: #434CA2;  ; font-size: 18px;  line-height: 28px; margin-bottom: 10px;margin-top: 0;">
+                                style="color: var(--iq-primary);  ; font-size: 18px;  line-height: 28px; margin-bottom: 10px;margin-top: 0;">
                                 يوم <?= $workshop['day']?>
                                 <br>
                                 <?= $workshop['date']?></span></p>
                         <p style="display: flex;align-items: center;">
-                            <img src="<?= URL::asset('/Application/Assets/business_card_and_poster/clock (1).png')?>" alt="" style="width: 40px;margin-inline-end: 10px; padding-inline-end: 10px; height: 40px; border-left: 2px solid #434CA2;">
+                            <img src="<?= URL::asset('/Application/Assets/business_card_and_poster/clock (1).png')?>" alt="" style="width: 40px;margin-inline-end: 10px; padding-inline-end: 10px; height: 40px; border-left: 2px solid var(--iq-primary);">
                             <span
-                                style="color: #434CA2;  ; font-size: 18px;  line-height: 28px; margin-bottom: 0px; margin-top: 0;">
+                                style="color: var(--iq-primary);  ; font-size: 18px;  line-height: 28px; margin-bottom: 0px; margin-top: 0;">
                                     تبدأ الساعة
                                     <br>
                                 <?= $workshop['time']?></span>
@@ -102,10 +102,10 @@ $lang = Model::get('\Application\Models\Language');
 
                     </td>
                     <td style="width:32%;    text-align: center;">
-                        <h3 style="margin: 0px 0 10px 0;font-size: 28px; font-weight: bold; color: #434CA2;">للتسجيل</h3>
+                        <h3 style="margin: 0px 0 10px 0;font-size: 28px; font-weight: bold; color: var(--iq-primary);">للتسجيل</h3>
                         <img src="data:image/png;base64,<?= base64_encode(file_get_contents(URL::asset("Storage/BusinessCards/qr_code_poster_{$feedId}.png"))); ?>"   alt="" style="    width: 130px;
                           height: 130px;">
-                        <span style="font-size: 16px; font-weight: 400; color: #434CA2; display:block"><?= $user['username']?>@</span>
+                        <span style="font-size: 16px; font-weight: 400; color: var(--iq-primary); display:block"><?= $user['username']?>@</span>
                     </td>
                     <td style="width:32%;     text-align: center;">
 

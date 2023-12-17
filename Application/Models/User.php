@@ -3,6 +3,7 @@
 namespace Application\Models;
 
 use Application\Controllers\Review;
+use Application\Helpers\TenantHelper;
 use System\Core\Model;
 use System\Models\AbstractAuth;
 
@@ -56,6 +57,7 @@ class User extends AbstractAuth
     
     public function create( $data )
     {
+        $data['tenant_id'] = TenantHelper::getId();
         return $this->_db->insert($this->_table, $data);
     }
 
@@ -525,6 +527,9 @@ class User extends AbstractAuth
             $dbValues[] = $searchedBy;
         }
 
+        $SQL .= " AND u.`tenant_id` = ?";
+        $dbValues[] = TenantHelper::getId();
+
         $SQL .= " ORDER BY `u`.`account_verified` DESC, `r`.`rate` DESC, `r`.`totalRate` DESC, `u`.`id` DESC ";
 //            $SQL .= " ORDER BY `u`.`account_verified` DESC";
 
@@ -631,8 +636,10 @@ class User extends AbstractAuth
     {
         $SQL = "SELECT * FROM `{$this->_table}` INNER JOIN 
                     (  SELECT entity_owner_id AS user_id, AVG(star) AS rating FROM `reviews` GROUP by entity_owner_id ) AS reviews 
-                          ON (users.id = reviews.user_id) ORDER BY reviews.rating DESC;";
-        return $this->_db->query($SQL)->getAll();
+                          ON (users.id = reviews.user_id)
+         WHERE `{$this->_table}`.`tenant_id` = ?
+         ORDER BY reviews.rating DESC;";
+        return $this->_db->query($SQL, [TenantHelper::getId()])->getAll();
     }
 
     public function markBusinessCardASRecieved($id)

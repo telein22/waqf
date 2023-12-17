@@ -4,6 +4,7 @@ namespace Application\Models;
 
 use Application\Helpers\AppHelper;
 use Application\Helpers\Calendar;
+use Application\Helpers\TenantHelper;
 use Application\Modules\Events\WorkshopEvent;
 use System\Core\Config;
 use System\Core\Model;
@@ -22,6 +23,7 @@ class Workshop extends Model
 
     public function create($data)
     {
+        $data['tenant_id'] = TenantHelper::getId();
         return $this->_db->insert($this->_table, $data);
     }
 
@@ -107,7 +109,8 @@ class Workshop extends Model
         $dbValues[]= $participant;
         $dbValues[]= $participant;
 
-        $SQL .= " ORDER BY `w`.`id` DESC ";
+        $SQL .= " AND `tenant_id` = ? ORDER BY `w`.`id` DESC ";
+        $dbValues[] = TenantHelper::getId();
 
         if (is_numeric($skip) && is_numeric($limit)) {
             $SQL .= " LIMIT ?, ? ";
@@ -129,9 +132,13 @@ class Workshop extends Model
         $followT = $followM->getTable();
 
         $SQL = "SELECT * FROM
-                `{$this->_table}`
-                WHERE `user_id` = ?
+                `{$this->_table}`            
+                WHERE
+                `tenant_id` = ?
+                AND `user_id` = ?
                 AND `date` > NOW() ";
+
+        $dbValues[] = TenantHelper::getId();
 
         if ($onlyFollowing) {
             $SQL .= " AND `user_id` IN (
@@ -173,7 +180,8 @@ class Workshop extends Model
                 `{$this->_table}`
                 WHERE `user_id` <> ?
                 AND DATE_ADD(date, INTERVAL duration minute) > NOW()
-                AND status in (?, ?)";
+                AND status in (?, ?)
+                AND `tenant_id` = ?";
 
         if (!empty($names)) {
             $placeHolders = array();
@@ -202,6 +210,7 @@ class Workshop extends Model
 
         $dbValues[] = self::STATUS_NOT_STARTED;
         $dbValues[] = self::STATUS_CURRENT;
+        $dbValues[] = TenantHelper::getId();
 
         if (!empty($date)) {
             $SQL .= " AND `date` LIKE '%$date%' ";
@@ -224,9 +233,10 @@ class Workshop extends Model
     {
         $SQL = "SELECT * FROM `{$this->_table}`
                 WHERE `status` = ?
+                  AND `tenant_id` = ?
                 AND `date` > NOW()";
 
-        $dbValues = [self::STATUS_NOT_STARTED];
+        $dbValues = [self::STATUS_NOT_STARTED, TenantHelper::getId()];
 
         if ($isAdvisor) {
             $SQL .= " AND `user_id` = ? ";
@@ -267,7 +277,8 @@ class Workshop extends Model
         $SQL = "SELECT * FROM `{$this->_table}`
                 WHERE `status` IN (?, ?, ?)
                 AND (DATE_SUB(date, INTERVAL ? minute) <= NOW() AND DATE_ADD(date, INTERVAL duration minute) >= NOW())
-                AND ((user_id = ? AND EXISTS (SELECT 1 FROM {$participantTable} WHERE entity_type = ? AND entity_id = `{$this->_table}`.id) ) OR id IN (SELECT entity_id FROM {$participantTable} WHERE entity_type = ? AND user_id = ?))";
+                AND ((user_id = ? AND EXISTS (SELECT 1 FROM {$participantTable} WHERE entity_type = ? AND entity_id = `{$this->_table}`.id) ) OR id IN (SELECT entity_id FROM {$participantTable} WHERE entity_type = ? AND user_id = ?))
+                AND `tenant_id` = ?";
 
         $dbValues = [
             self::STATUS_NOT_STARTED,
@@ -277,7 +288,8 @@ class Workshop extends Model
             $userId,
             self::ENTITY_TYPE,
             self::ENTITY_TYPE,
-            $userId
+            $userId,
+            TenantHelper::getId()
         ];
 
         return $this->_db->query($SQL, $dbValues)->get();
@@ -286,23 +298,23 @@ class Workshop extends Model
     public function getInfoById($id)
     {
         $SQL = "SELECT * FROM `{$this->_table}` 
-                WHERE `id` = ?";
+                WHERE `id` = ? AND `tenant_id` = ?";
 
-        return $this->_db->query($SQL, [$id])->get();
+        return $this->_db->query($SQL, [$id, TenantHelper::getId()])->get();
     }
 
     public function getById($id)
     {
         $SQL = "SELECT * FROM `{$this->_table}` 
-                WHERE `id` = ?";
+                WHERE `id` = ? AND `tenant_id` = ?";
 
-        return $this->_db->query($SQL, [$id])->get();
+        return $this->_db->query($SQL, [$id, TenantHelper::getId()])->get();
     }
 
     public function listByStatus($status)
     {
         $SQL = "SELECT COUNT(*) as `count` FROM `{$this->_table}` 
-                WHERE `status` = ?";
+                WHERE `status` = ? AND `tenant_id` = ?";
 
         $userInfo = Model::get(User::class)->getInfo();
 
@@ -310,7 +322,7 @@ class Workshop extends Model
             $SQL .= " AND `user_id` IN (SELECT `id` from `users` WHERE `entity_id` =  {$userInfo['id']} )";
         }
 
-        $result = $this->_db->query($SQL, [$status])->get();
+        $result = $this->_db->query($SQL, [$status, TenantHelper::getId()])->get();
 
         return $result['count'];
     }
@@ -328,6 +340,8 @@ class Workshop extends Model
 
         $SQL .= " (" . implode(', ', $placeholder) . ")";
 
+        $SQL .= ' AND `tenant_id` = ?';
+        $values[]= TenantHelper::getId();
         $result = $this->_db->query($SQL, $values)->getAll();
 
         if (!$result) return [];
@@ -374,12 +388,12 @@ class Workshop extends Model
         return $workshop['user_id'] != $userId && !$participantM->isParticipated($userId, $workshop['id'], self::ENTITY_TYPE);
     }
 
-    public function addToCalendar(WorkshopEvent $workshopEvent): Calendar {
-        $calendar = new Calendar($userInfo, $workshopEvent);
-        $calendar->save();
-
-        return $calendar;
-    }
+//    public function addToCalendar(WorkshopEvent $workshopEvent): Calendar {
+//        $calendar = new Calendar($userInfo, $workshopEvent);
+//        $calendar->save();
+//
+//        return $calendar;
+//    }
 
     public function findWorkshopByGivenPeriod(int $userId, string $datetime, int $duration)
     {
@@ -388,7 +402,7 @@ class Workshop extends Model
             OR (DATE_ADD(date, interval duration minute) BETWEEN ? AND DATE_ADD(?, interval ? minute)) 
             OR (? BETWEEN date AND DATE_ADD(date, interval duration minute)) 
             OR (DATE_ADD(?, interval ? minute) BETWEEN date AND DATE_ADD(date, interval duration minute)) 
-            ) AND user_id = ? AND status in (?, ?) limit 1";
+            ) AND user_id = ? AND status in (?, ?) AND `tenant_id` = ?   limit 1";
 
             $result = $this->_db->query($SQL, [
                 $datetime,
@@ -402,7 +416,8 @@ class Workshop extends Model
                 $duration,
                 $userId,
                 self::STATUS_CURRENT,
-                self::STATUS_NOT_STARTED
+                self::STATUS_NOT_STARTED,
+                TenantHelper::getId()
             ])->get();
 
         return $result;
@@ -410,11 +425,12 @@ class Workshop extends Model
 
     public function getAllCurrentOrNotStartedWorkshops()
     {
-        $SQL = "SELECT `id`, `name` FROM `{$this->_table}` WHERE `status` IN (?, ?) AND `date` >= NOW() ORDER BY `id` DESC";
+        $SQL = "SELECT `id`, `name` FROM `{$this->_table}` WHERE `status` IN (?, ?) AND `date` >= NOW() AND `tenant_id` = ? ORDER BY `id` DESC";
 
         $result = $this->_db->query($SQL, [
             self::STATUS_NOT_STARTED,
-            self::STATUS_CURRENT
+            self::STATUS_CURRENT,
+            TenantHelper::getId()
         ])->getAll();
 
         return $result;
@@ -422,19 +438,22 @@ class Workshop extends Model
 
     public function getLastCreatedWorkshop()
     {
-        $SQL = "SELECT * FROM `{$this->_table}`
+        $SQL = "SELECT * FROM `{$this->_table}` WHERE `tenant_id` = ?
                 ORDER BY `id` DESC
                 LIMIT 1";
 
-        return $this->_db->query($SQL)->get();
+        return $this->_db->query($SQL, [
+            TenantHelper::getId()
+        ])->get();
     }
 
     public function getPerformedMinutes()
     {
-        $SQL = "SELECT sum(`duration`) as numMinutes FROM `{$this->_table}` WHERE `status` IN (?, ?)";
+        $SQL = "SELECT sum(`duration`) as numMinutes FROM `{$this->_table}` WHERE `status` IN (?, ?) AND `tenant_id` = ?";
         $res = $this->_db->query($SQL, [
             self::STATUS_COMPLETED,
-            self::STATUS_CURRENT
+            self::STATUS_CURRENT,
+            TenantHelper::getId()
         ])->get();
 
         return $res['numMinutes'];
@@ -442,9 +461,9 @@ class Workshop extends Model
 
     public function getLatestOne($userId)
     {
-        $SQL = "SELECT * FROM `{$this->_table}` WHERE `user_id` = ? ORDER BY id DESC LIMIT 1";
+        $SQL = "SELECT * FROM `{$this->_table}` WHERE `user_id` = ? AND `tenant_id` = ? ORDER BY id DESC LIMIT 1";
         return $this->_db->query($SQL, [
-            $userId
+            $userId, TenantHelper::getId()
         ])->get();
     }
 }

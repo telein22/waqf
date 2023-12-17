@@ -26,7 +26,7 @@ $lang = Model::get(Language::class);
         <div class="col-md-12">
             <div class="specialities-items owl-carousel">
                 <div class="item">
-                    <a href="<?= (strpos($_SERVER['REQUEST_URI'], 'dashboard') === false) ? 'dashboard/' : '/dashboard/'; ?>">
+                    <a href="<?= URL::full('dashboard')?>">
                         <p class="alert alert-danger bg-filter-color text-nowrap mb-0 <?php if( !$selected ) echo 'active-alert' ?>">
                             <?= $lang('all'); ?>
                         </p>
@@ -51,7 +51,7 @@ $lang = Model::get(Language::class);
             <div class="col-md-12">
                 <div class="specialities-items owl-carousel">
                     <div class="item">
-                        <a href="<?= (strpos($_SERVER['REQUEST_URI'], 'dashboard') === false) ? 'dashboard/' : '/dashboard/'; ?>">
+                        <a href="<?= URL::full('dashboard')?>">
                             <p class="alert alert-danger bg-filter-color text-nowrap mb-0 <?php if( !$entitySelected ) echo 'active-alert' ?>">
                                 <?= $lang('all'); ?>
                             </p>

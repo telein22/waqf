@@ -18,11 +18,11 @@
 
 /* start variables */
 :root {
-  --main-color: #3f4aaa;
+  --main-color: #076939;
   --base-color: #fff;
   --dark-color: #000;
   --gray-color: #757779;
-  --light-blue-color: #7d8aaa;
+  --light-blue-color: #7daa7e;
 }
 /* start global style */
 * {
@@ -738,33 +738,33 @@ video {
 
 .btn-main {
     color: #fff;
-    background: #3f4aaa;
+    background: var(--main-color);
     border-radius: 20px;
     padding: 5px 20px;
 }
 
 .btn-main:hover {
-    background: #3f4aaa
+    background: var(--main-color)
 }
 
 .btn-outline {
-    color: #3f4aaa;
+    color: var(--main-color);
     border-radius: 20px;
-    border: 1px solid #3f4aaa;
+    border: 1px solid var(--main-color);
     padding: 5px 20px;
     font-weight: 500;
     text-decoration: none;
 }
 
 .btn-outline:hover {
-    color: #3f4aaa;
-    border: 1px solid #3f4aaa;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
 }
 
 .btn-outline-large {
-    color: #3f4aaa;
+    color: var(--main-color);
     border-radius: 30px;
-    border: 1px solid #3f4aaa;
+    border: 1px solid var(--main-color);
     padding: 8px 25px;
     font-weight: 500;
     text-decoration: none;
@@ -772,8 +772,8 @@ video {
 
 .btn-outline-large:hover {
     color: #fff;
-    border: 1px solid #3f4aaa;
-    background: #3f4aaa;
+    border: 1px solid var(--main-color);
+    background: var(--main-color);
 }
 
 .error {

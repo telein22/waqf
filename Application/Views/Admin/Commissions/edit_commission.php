@@ -44,7 +44,7 @@ $lang = Model::get('\Application\Models\Language');
                             <button type="submit" class="btn btn-primary"><?= $lang('submit') ?></button>
                         </div>
                     </form>
-                    <!-- /xcd.card-body -->
+                    <!-- /.card-body -->
                 </div>
             </div>
         </div>

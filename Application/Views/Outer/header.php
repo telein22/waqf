@@ -131,9 +131,6 @@ $userM = Model::get("\Application\Models\User");
                         </li>
                     <?php endif ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">المدونة</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#about-us">من نحن</a>
                     </li>
                 </ul>

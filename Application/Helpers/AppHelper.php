@@ -2,8 +2,10 @@
 
 namespace Application\Helpers;
 
+use Application\Models\Tenant;
 use System\Core\Application;
 use System\Core\Config;
+use System\Core\Model;
 
 class AppHelper
 {
@@ -48,7 +50,7 @@ class AppHelper
         return "$awsBaseUrl/{$fileName}?{$config->version}";
     }
 
-    public static function getMinimumWithdrawalAmount()
+    public static function getMinimumWithdrawalAmount(): int
     {
         return Config::get('Website')->minimumWithdrawalAmount;
     }

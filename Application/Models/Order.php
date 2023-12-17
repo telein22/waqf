@@ -3,6 +3,7 @@
 namespace Application\Models;
 
 use Application\Helpers\PaymentHelper;
+use Application\Helpers\TenantHelper;
 use System\Core\Model;
 
 class Order extends Model
@@ -229,6 +230,9 @@ class Order extends Model
             $where[] = '`created_at` < ?';
             $dbValues[] = (int)$toDate;
         }
+
+        $where[] = '`tenant_id` =  ?';
+        $dbValues[] = TenantHelper::getId();
 
         if (!empty($where)) {
             $SQL .= " WHERE ";

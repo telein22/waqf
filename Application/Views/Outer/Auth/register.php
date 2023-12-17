@@ -16,13 +16,13 @@ $lang = Model::get('\Application\Models\Language');
                 <div class="register">
                     <h2 class="t-36 mb-4"><?= $lang("register_title"); ?></h2>
                     <form action="<?php URL::current() ?>" class="row form register-form" method="POST" onsubmit="process(event)">
-                        <div class="col-12 mb-3">
-                            <input type="radio" id="inputIndividual" name="type" value="subscriber" checked <?= htmlentities($formValidator->getValue('type')) == 'subscriber' ? 'checked' : ''; ?> >
-                            <label for="inputIndividual" class="form-label individual"><?= $lang("individual"); ?></label>
-                            <br/>
-                            <input type="radio" id="inputEntity" name="type" value="entity" <?= htmlentities($formValidator->getValue('type')) == 'entity' ? 'checked' : ''; ?> >
-                            <label for="inputEntity" class="form-label"><?= $lang("entity"); ?></label>
-                        </div>
+<!--                        <div class="col-12 mb-3">-->
+<!--                            <input type="radio" id="inputIndividual" name="type" value="subscriber" checked --><?php //= htmlentities($formValidator->getValue('type')) == 'subscriber' ? 'checked' : ''; ?><!-- >-->
+<!--                            <label for="inputIndividual" class="form-label individual">--><?php //= $lang("individual"); ?><!--</label>-->
+<!--                            <br/>-->
+<!--                            <input type="radio" id="inputEntity" name="type" value="entity" --><?php //= htmlentities($formValidator->getValue('type')) == 'entity' ? 'checked' : ''; ?><!-- >-->
+<!--                            <label for="inputEntity" class="form-label">--><?php //= $lang("entity"); ?><!--</label>-->
+<!--                        </div>-->
                         <div class="col-12 mb-3 form-group required">
                             <label for="inputname" class="form-label"><?= $lang("name"); ?></label>
                             <input type="text" class="form-control" id="inputname" name="name" value="<?= htmlentities($formValidator->getValue('name')); ?>">
@@ -181,22 +181,6 @@ $lang = Model::get('\Application\Models\Language');
                 }
             });
         })
-
-        // phone number required star checks
-        $('[name="type"]').on('change', function() {
-            checkType($(this).val())
-        })
-
-        function checkType(type) {
-            if (type === 'entity') {
-                $('#phone-div').removeClass('required');
-            } else if (type === 'subscriber') {
-                $('#phone-div').addClass('required');
-            }
-        }
-
-        var type = "<?= $formValidator->getValue('type') ?>";
-        checkType(type);
     </script>
 
     <script>

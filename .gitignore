@@ -2,6 +2,7 @@
 Application/Composer/vendor
 Application/Uploads/*
 !Application/Uploads/.gitkeep
+!Application/Uploads/default-avatar.jpg
 Application/Cache/*
 !Application/Cache/.gitkeep
 backups
