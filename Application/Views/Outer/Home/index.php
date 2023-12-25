@@ -14,28 +14,16 @@ $lang = Model::get(Language::class);
 <section class="hero">
     <div class="big_slider " data-aos="fade-up">
         <div class="hero_slide">
-            <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/7.png') ?>">
-        </div>
-        <div class="hero_slide">
             <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/1.png') ?>">
         </div>
         <div class="hero_slide">
             <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/3.png') ?>">
         </div>
         <div class="hero_slide">
-            <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/9.png') ?>">
-        </div>
-        <div class="hero_slide">
-            <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/8.png') ?>">
-        </div>
-        <div class="hero_slide">
             <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/4.png') ?>">
         </div>
         <div class="hero_slide">
             <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/2.png') ?>">
-        </div>
-        <div class="hero_slide">
-            <img alt="" width="100%" src="<?= URL::asset('Application/Assets/Outer/home/images/slider/6.png') ?>">
         </div>
     </div>
 </section>
@@ -530,393 +518,219 @@ $lang = Model::get(Language::class);
 
 
     <!-- start provider -->
-    <section class="provider">
-        <div class="container-fluid" data-aos="fade-up">
-            <div class="heading_section mb-4">
-                <h2>كيف تستفيد من المنصة</h2>
-            </div>
-            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="side-tabs-tab" data-bs-toggle="pill"
-                            data-bs-target="#side-tabs" type="button" role="tab" aria-controls="side-tabs"
-                            aria-selected="true">كمقدم خدمة</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="large-tabs-tab" data-bs-toggle="pill" data-bs-target="#large-tabs"
-                            type="button" role="tab" aria-controls="large-tabs" aria-selected="false">كطالب خدمة</button>
-                </li>
-            </ul>
-            <div class="tab-content mt-5">
-                <div class="tab-pane fade show active" id="side-tabs" role="tabpanel"
-                     aria-labelledby="side-tabs-tab">
-                    <div class="row">
-                        <div class="col-lg-5" data-aos="fade-up">
-                            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="tab1-tab" data-bs-toggle="pill" href="#tab1"
-                                   role="tab" aria-controls="tab1" aria-selected="true">
-                                    <span class="faq_num">⦿</span>
-                                    كيف يمكن إكمال الملف الشخصي
-
-                                </a>
-                                <a class="nav-link" id="tab2-tab" data-bs-toggle="pill" href="#tab2" role="tab"
-                                   aria-controls="tab2" aria-selected="false">
-                                    <span class="faq_num">⦿</span>
-
-                                    كيف يفعل استقبال الرسائل
-                                </a>
-                                <a class="nav-link" id="tab3-tab" data-bs-toggle="pill" href="#tab3" role="tab"
-                                   aria-controls="tab3" aria-selected="false">
-                                    <span class="faq_num">⦿</span>
-
-                                    كيف ينشئ ويجدول المكالمات
-                                </a>
-                                <a class="nav-link" id="tab4-tab" data-bs-toggle="pill" href="#tab4" role="tab"
-                                   aria-controls="tab4" aria-selected="true">
-                                    <span class="faq_num">⦿</span>
-
-                                    كيف ينشئ الجلسات
-                                </a>
-                                <a class="nav-link" id="tab5-tab" data-bs-toggle="pill" href="#tab5" role="tab"
-                                   aria-controls="tab5" aria-selected="true">
-                                    <span class="faq_num">⦿</span>
-
-                                    مشاركة وبدء الجلسة
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-1"></div>
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab1" role="tabpanel"
-                                     aria-labelledby="tab1-tab">
-                                    <!-- small-slider -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/complete_profile/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/complete_profile/2.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/complete_profile/3.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/complete_profile/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="tab-pane fade " id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/receive_messages/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--    <section class="provider">-->
+<!--        <div class="container-fluid" data-aos="fade-up">-->
+<!--            <div class="heading_section mb-4">-->
+<!--                <h2>كيف تستفيد من المنصة</h2>-->
+<!--            </div>-->
+<!--            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">-->
+<!--                <li class="nav-item" role="presentation">-->
+<!--                    <button class="nav-link active" id="side-tabs-tab" data-bs-toggle="pill"-->
+<!--                            data-bs-target="#side-tabs" type="button" role="tab" aria-controls="side-tabs"-->
+<!--                            aria-selected="true">كمقدم خدمة</button>-->
+<!--                </li>-->
+<!--                <li class="nav-item" role="presentation">-->
+<!--                    <button class="nav-link" id="large-tabs-tab" data-bs-toggle="pill" data-bs-target="#large-tabs"-->
+<!--                            type="button" role="tab" aria-controls="large-tabs" aria-selected="false">كطالب خدمة</button>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <div class="tab-content mt-5">-->
+<!--                <div class="tab-pane fade show active" id="side-tabs" role="tabpanel"-->
+<!--                     aria-labelledby="side-tabs-tab">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-5" data-aos="fade-up">-->
+<!--                            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">-->
+<!--                                <a class="nav-link active" id="tab1-tab" data-bs-toggle="pill" href="#tab1"-->
+<!--                                   role="tab" aria-controls="tab1" aria-selected="true">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!--                                    كيف يمكن إكمال الملف الشخصي-->
+<!---->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab2-tab" data-bs-toggle="pill" href="#tab2" role="tab"-->
+<!--                                   aria-controls="tab2" aria-selected="false">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    كيف يفعل استقبال الرسائل-->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab3-tab" data-bs-toggle="pill" href="#tab3" role="tab"-->
+<!--                                   aria-controls="tab3" aria-selected="false">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    كيف ينشئ ويجدول المكالمات-->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab4-tab" data-bs-toggle="pill" href="#tab4" role="tab"-->
+<!--                                   aria-controls="tab4" aria-selected="true">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    كيف ينشئ الجلسات-->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab5-tab" data-bs-toggle="pill" href="#tab5" role="tab"-->
+<!--                                   aria-controls="tab5" aria-selected="true">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    مشاركة وبدء الجلسة-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-1"></div>-->
+<!--                        <div class="col-lg-6" data-aos="fade-up">-->
+<!--                            <div class="tab-content">-->
+<!--                                <div class="tab-pane fade show active" id="tab1" role="tabpanel"-->
+<!--                                     aria-labelledby="tab1-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_messages/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/complete_profile/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_messages/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_messages/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!---->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade " id="tab2" role="tabpanel" aria-labelledby="tab2-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/receive_messages/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/4.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade  " id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/create_sessions/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade " id="tab3" role="tabpanel" aria-labelledby="tab3-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/create_sessions/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/receive_calls/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/create_sessions/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/create_sessions/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade  " id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/share_start_session/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade  " id="tab4" role="tabpanel" aria-labelledby="tab4-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/share_start_session/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/create_sessions/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/share_start_session/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/share_start_session/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="large-tabs" role="tabpanel" aria-labelledby="large-tabs-tab">
-                    <div class="row">
-                        <div class="col-lg-5" data-aos="fade-up">
-                            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-
-                                <a class="nav-link active" id="tab6-tab" data-bs-toggle="pill" href="#tab6"
-                                   role="tab" aria-controls="tab6" aria-selected="false">
-                                    <span class="faq_num">⦿</span>
-
-                                    إرسال الرسائل
-                                </a>
-                                <a class="nav-link" id="tab7-tab" data-bs-toggle="pill" href="#tab7" role="tab"
-                                   aria-controls="tab7" aria-selected="false">
-                                    <span class="faq_num">⦿</span>
-
-                                    التسجيل في الجلسات
-                                </a>
-                                <a class="nav-link" id="tab8-tab" data-bs-toggle="pill" href="#tab8" role="tab"
-                                   aria-controls="tab8" aria-selected="false">
-                                    <span class="faq_num">⦿</span>
-
-                                    حجز مكالمة
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-1"></div>
-
-                        <div class="col-lg-6" data-aos="fade-up">
-                            <div class="tab-content">
-
-                                <div class="tab-pane fade show active" id="tab6" role="tabpanel"
-                                     aria-labelledby="tab6-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/send_messages/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade  " id="tab5" role="tabpanel" aria-labelledby="tab5-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/send_messages/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/share_start_session/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/send_messages/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/send_messages/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/book_session/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="tab-pane fade" id="large-tabs" role="tabpanel" aria-labelledby="large-tabs-tab">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-5" data-aos="fade-up">-->
+<!--                            <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">-->
+<!---->
+<!--                                <a class="nav-link active" id="tab6-tab" data-bs-toggle="pill" href="#tab6"-->
+<!--                                   role="tab" aria-controls="tab6" aria-selected="false">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    إرسال الرسائل-->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab7-tab" data-bs-toggle="pill" href="#tab7" role="tab"-->
+<!--                                   aria-controls="tab7" aria-selected="false">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    التسجيل في الجلسات-->
+<!--                                </a>-->
+<!--                                <a class="nav-link" id="tab8-tab" data-bs-toggle="pill" href="#tab8" role="tab"-->
+<!--                                   aria-controls="tab8" aria-selected="false">-->
+<!--                                    <span class="faq_num">⦿</span>-->
+<!---->
+<!--                                    حجز مكالمة-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-1"></div>-->
+<!---->
+<!--                        <div class="col-lg-6" data-aos="fade-up">-->
+<!--                            <div class="tab-content">-->
+<!---->
+<!--                                <div class="tab-pane fade show active" id="tab6" role="tabpanel"-->
+<!--                                     aria-labelledby="tab6-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_session/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/send_messages/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_session/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_session/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
-                                    <!-- drop your contenet here -->
-                                    <div class="serv_slider">
-
-                                        <div id="carouselExampleIndicators7" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                                                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="<?= URL::full('Application/Assets/Outer/home/images/instructions/book_call/0.png') ?>" alt="Tab Image" class="wrapp_box d-block w-100">
-                                                </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade " id="tab7" role="tabpanel" aria-labelledby="tab7-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
 <!--                                                <div class="carousel-item active">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_call/1.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/book_session/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_call/3.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="tab-pane fade " id="tab8" role="tabpanel" aria-labelledby="tab8-tab">-->
+<!--                                    <div class="serv_slider">-->
+<!---->
+<!--                                        <div id="carouselExampleIndicators7" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">-->
+<!--                                            <div class="carousel-indicators">-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-inner">-->
+<!--                                                <div class="carousel-item active">-->
+<!--                                                    <img src="--><?php //= URL::full('Application/Assets/Outer/home/images/instructions/book_call/0.png') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
 <!--                                                </div>-->
-<!--                                                <div class="carousel-item">-->
-<!--                                                    <img src="--><?//= URL::full('Application/Assets/Outer/home/images/instructions/book_call/2.jpg') ?><!--" alt="Tab Image" class="wrapp_box d-block w-100">-->
-<!--                                                </div>-->
-                                            </div>
-<!--                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide="prev">-->
-<!--                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Previous</span>-->
-<!--                                            </button>-->
-<!--                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide="next">-->
-<!--                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                                                <span class="visually-hidden">Next</span>-->
-<!--                                            </button>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 
 <!-- start sessions -->
@@ -1023,93 +837,94 @@ $lang = Model::get(Language::class);
 <?php endif; ?>
 
 <!-- start numbers -->
-<div class="clients">
-<div class="container" data-aos="fade-up">
-<div class="heading_section mb-5">
-    <h2>الأرقام</h2>
-    <p>تيلي ان في ارقام</p>
-</div>
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <div class="counter-wrapper">
-            <div class="img_wrapper">
-                <img src="<?= URL::asset('Application/Assets/Outer/home/images/n1.svg') ?>" alt="Image" />
+<!--<div class="clients">-->
+<!--<div class="container" data-aos="fade-up">-->
+<!--<div class="heading_section mb-5">-->
+<!--    <h2>الأرقام</h2>-->
+<!--    <p>تيلي ان في ارقام</p>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--    <div class="col-lg-3 col-6">-->
+<!--        <div class="counter-wrapper">-->
+<!--            <div class="img_wrapper">-->
+<!--                <img src="--><?php //= URL::asset('Application/Assets/Outer/home/images/n1.svg') ?><!--" alt="Image" />-->
+<!---->
+<!--            </div>-->
+<!--            <h5 class="stat-number">--><?php //= $feedViewsCount ?><!--</h5>-->
+<!--            <p>عدد زيارات الموقع</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-lg-3 col-6">-->
+<!--        <div class="counter-wrapper">-->
+<!--            <div class="img_wrapper">-->
+<!--                <img src="--><?php //= URL::asset('Application/Assets/Outer/home/images/n2.svg') ?><!--" alt="Image" />-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            <h5 class="stat-number">--><?php //= $numberOfMinutesForPerformedWorkshops ?><!--</h5>-->
+<!--            <p>عدد دقائق الجلسات التي تم اجراؤها</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-lg-3 col-6">-->
+<!--        <div class="counter-wrapper">-->
+<!--            <div class="img_wrapper">-->
+<!--                <img src="--><?php //= URL::asset('Application/Assets/Outer/home/images/n3.svg') ?><!--" alt="Image" />-->
+<!---->
+<!--            </div>-->
+<!--            <h5 class="stat-number">--><?php //= $numberOfMinutesForPerformedCalls ?><!--</h5>-->
+<!--            <p>عدد دقائق المكالمات التي تم انشاؤها</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-lg-3 col-6">-->
+<!--        <div class="counter-wrapper">-->
+<!--            <div class="img_wrapper">-->
+<!--                <img src="--><?php //= URL::asset('Application/Assets/Outer/home/images/n4.svg') ?><!--" alt="Image" />-->
+<!---->
+<!--            </div>-->
+<!--            <h5 class="stat-number">--><?php //= $usersCount ?><!--</h5>-->
+<!--            <p>مستخدم للموقع</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
-            </div>
-            <h5 class="stat-number"><?= $feedViewsCount ?></h5>
-            <p>عدد زيارات الموقع</p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-6">
-        <div class="counter-wrapper">
-            <div class="img_wrapper">
-                <img src="<?= URL::asset('Application/Assets/Outer/home/images/n2.svg') ?>" alt="Image" />
-
-            </div>
-
-            <h5 class="stat-number"><?= $numberOfMinutesForPerformedWorkshops ?></h5>
-            <p>عدد دقائق الجلسات التي تم اجراؤها</p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-6">
-        <div class="counter-wrapper">
-            <div class="img_wrapper">
-                <img src="<?= URL::asset('Application/Assets/Outer/home/images/n3.svg') ?>" alt="Image" />
-
-            </div>
-            <h5 class="stat-number"><?= $numberOfMinutesForPerformedCalls ?></h5>
-            <p>عدد دقائق المكالمات التي تم انشاؤها</p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-6">
-        <div class="counter-wrapper">
-            <div class="img_wrapper">
-                <img src="<?= URL::asset('Application/Assets/Outer/home/images/n4.svg') ?>" alt="Image" />
-
-            </div>
-            <h5 class="stat-number"><?= $usersCount ?></h5>
-            <p>مستخدم للموقع</p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
 <!-- bg-blue -->
 <!-- start clients -->
-<div class="clients " >
-<div class="container" data-aos="fade-up">
-<div class="heading_section mb-3">
-<h2> عملائنا وشركائنا </h2>
-<p>تيلي ان في ارقام</p>
-</div>
-<div class="responsive4">
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p1.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p2.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p3.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p4.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p5.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p6.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p7.png') ?>" alt="">
-    </a>
-    <a>
-        <img src="<?= AppHelper::getFileFromS3('images/partners/p8.png') ?>" alt="">
-    </a>
-</div>
-</div>
-</div>
+<!--<div class="clients " >-->
+<!--<div class="container" data-aos="fade-up">-->
+<!--<div class="heading_section mb-3">-->
+<!--<h2> عملائنا وشركائنا </h2>-->
+<!--<p>تيلي ان في ارقام</p>-->
+<!--</div>-->
+<!--<div class="responsive4">-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p1.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p2.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p3.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p4.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p5.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p6.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p7.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--    <a>-->
+<!--        <img src="--><?php //= AppHelper::getFileFromS3('images/partners/p8.png') ?><!--" alt="">-->
+<!--    </a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
 <div class="rating" id="highest-rated">
     <div class="container" data-aos="fade-up">
@@ -1169,76 +984,76 @@ $lang = Model::get(Language::class);
 </div>
 
 <!-- start testmonial -->
-<section class="bg-cust_2">
-        <div class="container-fluid" data-aos="fade-up">
-            <div class="heading_section text-white mb-5">
-                <h2>ماذا قالوا عن المنصة</h2>
-                <p>هو ببساطة نص شكلي بمعنى أن الغاية هي الشكل وليس المحتوى</p>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="responsive22">
-                        <a>
-                            <div class="d-flex align-items-end test_box">
-                                <img src="<?= AppHelper::getFileFromS3('images/ISNVEWpMpNqOkJpd2LGB_1696326901.jpg') ?>" class="rounded-circle ms-3"
-                                     alt="Testimonial Image" width="60" height="60"
-                                     style="border:2px solid #3F4AAA;">
-
-                                <div class="card   border-0">
-                                    <div class="card-body">
-                                        <div>
-                                            <p class="mb-0">تيلي ان وفرت الفرصة لاصحاب الخبرات لتقديم عصارة خبراتهم بالطريقة و الاسلوب المناسب لهم و للمستفيدين من خبراتهم</p>
-                                            <h5>Ahmed Alhuwaymil</h5>
-                                            <small class="d-block  mt-2">@ahmed</small>
-                                        </div>
-                                    </div>
-                                    <div class="speech-bubble"></div>
-
-                                </div>
-
-                            </div>
-                        </a>
-                        <a>
-                            <div class="d-flex align-items-end test_box">
-                                <img src="<?= AppHelper::getFileFromS3('images/ZFVqxecyucWtVKferpY2_1663769344.jpg') ?>" class="rounded-circle ms-3"
-                                     alt="Testimonial Image" width="60" height="60"
-                                     style="border:2px solid #3F4AAA;">
-
-                                <div class="card   border-0">
-                                    <div class="card-body">
-                                        <div>
-                                            <p class="mb-0">منصة تيلي إن فريدة ومن خلالها تم توثيق وتأمين العلاقة مابين المستخدمين، حيث اصبحت تيلي إن الخيار الأمثل لكل أطراف العلاقة سواء خبير أو طالب خدمة.</p>
-                                            <h5>Fahad Alhammad</h5>
-                                            <small class="d-block  mt-2">@fahad</small>
-                                        </div>
-                                    </div>
-                                    <div class="speech-bubble"></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a>
-                            <div class="d-flex align-items-end test_box">
-                                <img src="<?= AppHelper::getFileFromS3('images/JfKrq66lBZA63aSCdVkh_1661524215.jpg') ?>" class="rounded-circle ms-3"
-                                     alt="Testimonial Image" width="60" height="60"
-                                     style="border:2px solid #3F4AAA;">
-
-                                <div class="card   border-0">
-                                    <div class="card-body">
-                                        <div>
-                                            <p class="mb-0">ساهمت منصة تيلي بسهولة وصولي لجمهوري و تقديم خبراتي ودوراتي عبر المنصة في وقت فراغي دون أي قيود والتزامات إدارية</p>
-                                            <h5>Dr. Salim Ghandorah</h5>
-                                            <small class="d-block  mt-2">@ssghando</small>
-                                        </div>
-                                    </div>
-                                    <div class="speech-bubble"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--<section class="bg-cust_2">-->
+<!--        <div class="container-fluid" data-aos="fade-up">-->
+<!--            <div class="heading_section text-white mb-5">-->
+<!--                <h2>ماذا قالوا عن المنصة</h2>-->
+<!--                <p>هو ببساطة نص شكلي بمعنى أن الغاية هي الشكل وليس المحتوى</p>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-12">-->
+<!--                    <div class="responsive22">-->
+<!--                        <a>-->
+<!--                            <div class="d-flex align-items-end test_box">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/ISNVEWpMpNqOkJpd2LGB_1696326901.jpg') ?><!--" class="rounded-circle ms-3"-->
+<!--                                     alt="Testimonial Image" width="60" height="60"-->
+<!--                                     style="border:2px solid #3F4AAA;">-->
+<!---->
+<!--                                <div class="card   border-0">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div>-->
+<!--                                            <p class="mb-0">تيلي ان وفرت الفرصة لاصحاب الخبرات لتقديم عصارة خبراتهم بالطريقة و الاسلوب المناسب لهم و للمستفيدين من خبراتهم</p>-->
+<!--                                            <h5>Ahmed Alhuwaymil</h5>-->
+<!--                                            <small class="d-block  mt-2">@ahmed</small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="speech-bubble"></div>-->
+<!---->
+<!--                                </div>-->
+<!---->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a>-->
+<!--                            <div class="d-flex align-items-end test_box">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/ZFVqxecyucWtVKferpY2_1663769344.jpg') ?><!--" class="rounded-circle ms-3"-->
+<!--                                     alt="Testimonial Image" width="60" height="60"-->
+<!--                                     style="border:2px solid #3F4AAA;">-->
+<!---->
+<!--                                <div class="card   border-0">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div>-->
+<!--                                            <p class="mb-0">منصة تيلي إن فريدة ومن خلالها تم توثيق وتأمين العلاقة مابين المستخدمين، حيث اصبحت تيلي إن الخيار الأمثل لكل أطراف العلاقة سواء خبير أو طالب خدمة.</p>-->
+<!--                                            <h5>Fahad Alhammad</h5>-->
+<!--                                            <small class="d-block  mt-2">@fahad</small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="speech-bubble"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a>-->
+<!--                            <div class="d-flex align-items-end test_box">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/JfKrq66lBZA63aSCdVkh_1661524215.jpg') ?><!--" class="rounded-circle ms-3"-->
+<!--                                     alt="Testimonial Image" width="60" height="60"-->
+<!--                                     style="border:2px solid #3F4AAA;">-->
+<!---->
+<!--                                <div class="card   border-0">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div>-->
+<!--                                            <p class="mb-0">ساهمت منصة تيلي بسهولة وصولي لجمهوري و تقديم خبراتي ودوراتي عبر المنصة في وقت فراغي دون أي قيود والتزامات إدارية</p>-->
+<!--                                            <h5>Dr. Salim Ghandorah</h5>-->
+<!--                                            <small class="d-block  mt-2">@ssghando</small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="speech-bubble"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 
 
@@ -1265,128 +1080,128 @@ $lang = Model::get(Language::class);
     </div>
 </section>
 <!-- start blog -->
-<div class="booking_box" id="blog">
-<div class="container" data-aos="fade-up">
-    <div class="heading_section">
-        <h2>المدونة</h2>
-        <p>تابع اول باول ليصلك كل جديد</p>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="responsive3 slider_wrapper">
-                <a href="<?= URL::full('blogs') . '/1' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">آفاق جديدة لزكاة عِلمك</h5>
-                            <p class="card-text">قديماً؛ كانت فرص التعلم لأي مهارة جديدة محصورة في اجتهادات شخصية مقرونة بالشغف وحب التغيير…
-                                </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/HLGc5RjVrVwiXfUDtkn0_1661777365.jpeg') ?>" class=" rounded-circle ms-2  "
-                                    alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">Abdulaziz Alarifi<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@alarifia</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="<?= URL::full('blogs') . '/2' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">العلامة التجارية العابر للقارات</h5>
-                            <p class="card-text">ماكدونالدز، ستاربكس، أرامكو، توتال انيرجيز، HSBC...
-                            </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/ISNVEWpMpNqOkJpd2LGB_1696326901.jpg') ?>" class=" rounded-circle ms-2  "
-                                     alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">Ahmed Alhuwaymil<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@ahmed</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="<?= URL::full('blogs') . '/3' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">دور منصة تيلي إن في مشاركة المعرفة</h5>
-                            <p class="card-text">نقل العلوم والمعارف وتبادلها بين أصحاب الاختصاص ومع...
-                            </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/default-avatar.jpg') ?>" class=" rounded-circle ms-2  "
-                                     alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">Reem Alhassan<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@reem</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="<?= URL::full('blogs') . '/4' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">الفرص والتحديات</h5>
-                            <p class="card-text">عدم وجود منصة افتراضية تقدم الخدمة المجتمعية المتمثلة بنقل العلم ورفع الوعي وتبادل المنافع...
-                            </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/default-avatar.jpg') ?>" class=" rounded-circle ms-2  "
-                                     alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@telein</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="<?= URL::full('blogs') . '/5' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">المسؤولية الاجتماعية</h5>
-                            <p class="card-text">تأتي منصة تيلي إن كقيمة مضافة على شكل وسيط يخدم أفراد المجتمع تحت شعار من المجتمع إلى المجتمع حيث...
-                            </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/default-avatar.jpg') ?>" class=" rounded-circle ms-2  "
-                                     alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@telein</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="<?= URL::full('blogs') . '/6' ?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">مايميز تيلي إن</h5>
-                            <p class="card-text">تمكن المنصة المستخدمون بالاستفادة من خصائص المنصة على مختلف تخصصاتهم ومجالاتهم...
-                            </p>
-
-                            <div class="d-flex align-items-center">
-                                <img src="<?= AppHelper::getFileFromS3('images/default-avatar.jpg') ?>" class=" rounded-circle ms-2  "
-                                     alt="User Image" width="100" height="100">
-                                <div>
-                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>
-                                    <small class="text-muted">@telein</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+<!--<div class="booking_box" id="blog">-->
+<!--<div class="container" data-aos="fade-up">-->
+<!--    <div class="heading_section">-->
+<!--        <h2>المدونة</h2>-->
+<!--        <p>تابع اول باول ليصلك كل جديد</p>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="col-12">-->
+<!--            <div class="responsive3 slider_wrapper">-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/1' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">آفاق جديدة لزكاة عِلمك</h5>-->
+<!--                            <p class="card-text">قديماً؛ كانت فرص التعلم لأي مهارة جديدة محصورة في اجتهادات شخصية مقرونة بالشغف وحب التغيير…-->
+<!--                                </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/HLGc5RjVrVwiXfUDtkn0_1661777365.jpeg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                    alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">Abdulaziz Alarifi<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@alarifia</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/2' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">العلامة التجارية العابر للقارات</h5>-->
+<!--                            <p class="card-text">ماكدونالدز، ستاربكس، أرامكو، توتال انيرجيز، HSBC...-->
+<!--                            </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/ISNVEWpMpNqOkJpd2LGB_1696326901.jpg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                     alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">Ahmed Alhuwaymil<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@ahmed</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/3' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">دور منصة تيلي إن في مشاركة المعرفة</h5>-->
+<!--                            <p class="card-text">نقل العلوم والمعارف وتبادلها بين أصحاب الاختصاص ومع...-->
+<!--                            </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/default-avatar.jpg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                     alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">Reem Alhassan<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@reem</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/4' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">الفرص والتحديات</h5>-->
+<!--                            <p class="card-text">عدم وجود منصة افتراضية تقدم الخدمة المجتمعية المتمثلة بنقل العلم ورفع الوعي وتبادل المنافع...-->
+<!--                            </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/default-avatar.jpg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                     alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@telein</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/5' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">المسؤولية الاجتماعية</h5>-->
+<!--                            <p class="card-text">تأتي منصة تيلي إن كقيمة مضافة على شكل وسيط يخدم أفراد المجتمع تحت شعار من المجتمع إلى المجتمع حيث...-->
+<!--                            </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/default-avatar.jpg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                     alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@telein</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="--><?php //= URL::full('blogs') . '/6' ?><!--">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">مايميز تيلي إن</h5>-->
+<!--                            <p class="card-text">تمكن المنصة المستخدمون بالاستفادة من خصائص المنصة على مختلف تخصصاتهم ومجالاتهم...-->
+<!--                            </p>-->
+<!---->
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <img src="--><?php //= AppHelper::getFileFromS3('images/default-avatar.jpg') ?><!--" class=" rounded-circle ms-2  "-->
+<!--                                     alt="User Image" width="100" height="100">-->
+<!--                                <div>-->
+<!--                                    <p class="dis">منصة تيلي إن<i class="fa-regular fa-circle-check"></i></p>-->
+<!--                                    <small class="text-muted">@telein</small>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
 
 <!-- contact -->
 <div class="booking_box bg-blue contact">

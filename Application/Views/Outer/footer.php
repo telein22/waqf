@@ -20,9 +20,9 @@ $number = $config->whatsapp_number;
                 <a href="<?= URL::full("/"); ?>">
                     <img src="<?= URL::asset("Application/Assets/Outer/home/images/logo.svg") ?>" class="img-fluid" alt="Footer">
                 </a>
-                <p class="mb-0">منصة تواصل اجتماعي تمكن مختلف أفراد المجتمع من التواصل الفعّال فيما بينهم في مختلف المجالات والخبرات.
-                    يستطيع المستخدم التواصل مع أصحاب الخبرات والإستفادة من حسابه الشخصي كمختص عن طريق فتح قناة للتواصل مع الآخرين.
-                    كما تمكن المنصة الجهات الحكومية والخاصة والجمعيات الخيرية من الإستفادة مع منسوبيها وذوي الخبرات بتقديم خدماتهم على أوسع نطاق.</p>
+                <p class="mb-0">
+                    منظمة وقفية علمية عصرية تهدف إلى إحياء سّنة الوقف الإسلامي وتفعيل دوره في بناء وتنمية المجتمع من خلال ابتكار مبادرات تنموية نوعية قائمة على استخدام العلم بهدف النهوض ببالدنا الحبيبة وخدمتها في مختلف المجاالت البحثية والاجتماعية والاقتصادية والصحية والبيئية
+                </p>
             </div>
             <div class="col-lg-3 mb-4 mb-lg-0">
                 <h5 class="mb-4">روابط هامة</h5>
@@ -50,11 +50,12 @@ $number = $config->whatsapp_number;
 <!--                </form>-->
                 <h5 class="mb-2 ">التواصل الاجتماعي</h5>
                 <ul class="social-foot mb-2">
-                    <li><a href="https://www.youtube.com/channel/UCgBlPTjzikIY4eeMPIH1Irg" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="<?= "https://api.whatsapp.com/send/?phone=" . $number . "&text=Hi&app_absent=0"; ?>" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="https://mobile.twitter.com/telein_" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/tele.in/?igshid=YmMyMTA2M2Y%3D" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/telein-net" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://twitter.com/waqf_kau"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.youtube.com/@waqforg/videos"><i class="fab fa-youtube"></i></a>
+                    </li>
                 </ul>
                 <a href="#"><img src="assets/images/footer-pay.jpeg.png" alt="">
                 </a>

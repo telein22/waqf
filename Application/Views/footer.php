@@ -44,22 +44,10 @@ $number = $config->whatsapp_number;
          <div class="col-lg-4 text-right sm-text-center footer-social">
             <ul class="list-inline mb-0 ">
                <li class="list-inline-item">
-                  <a target="_blank" href="https://t.me/TeleInTelegram"><i class="fab fa-telegram-plane"></i></a>
+                  <a target="_blank" href="https://twitter.com/waqf_kau"><i class="fab fa-twitter"></i></a>
                </li>
                <li class="list-inline-item">
-                  <a target="_blank" href=" https://mobile.twitter.com/telein_"><i class="fab fa-twitter"></i></a>
-               </li>
-               <li class="list-inline-item">
-                  <a target="_blank" href="https://www.linkedin.com/company/telein-net/"><i class="fab fa-linkedin-in"></i></a>
-               </li>
-               <li class="list-inline-item">
-                  <a target="_blank" href="<?= "https://api.whatsapp.com/send/?phone=" . $number . "&text=Hi&app_absent=0"; ?>"><i class="fab fa-whatsapp"></i></a>
-               </li>
-               <li class="list-inline-item">
-                  <a target="_blank" href="https://www.instagram.com/tele.in/?igshid=YmMyMTA2M2Y%3D"><i class="fab fa-instagram"></i></a>
-               </li>
-               <li class="list-inline-item">
-                  <a target="_blank" href="https://www.youtube.com/channel/UCgBlPTjzikIY4eeMPIH1Irg"><i class="fab fa-youtube"></i></a>
+                  <a target="_blank" href="https://www.youtube.com/@waqforg/videos"><i class="fab fa-youtube"></i></a>
                </li>
             </ul>
             <span class="footer-copyright"><?= $lang('copyright', ['date' => date('Y')]) ?></span>

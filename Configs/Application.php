@@ -311,7 +311,5 @@ $application->set([
         'api_key' => $_ENV['DYTE_API_KEY']
     ],
 
-    'API' => [
-        'api_key' => $_ENV['TELEIN_API_KEY']
-    ]
+    'tenant_name' => $_ENV['TENANT_NAME'],
 ]);

@@ -438,12 +438,9 @@ $searchQ = Request::instance()->get('q');
                 'user' => $userInfo
             ]); ?>
 
-            <?php View::include('Calls/modal', [
-                'charities' => $charities,
-            ]) ?>
+            <?php View::include('Calls/modal') ?>
 
             <?php View::include('Workshop/modal', [
-                'charities' => [],
                 'user' => $userInfo
             ]) ?>
 
@@ -764,7 +761,7 @@ $searchQ = Request::instance()->get('q');
                     .floating-button {
                         display: block;
                         margin-right: 10px;
-                        background-color: #3f4aaa;
+                        background-color: var(--iq-primary);
                         color: #ffffff;
                         padding: 10px;
                         border-radius: 50%;

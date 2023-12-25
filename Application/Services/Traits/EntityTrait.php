@@ -6,6 +6,7 @@ use Application\Dtos\BaseItem;
 use Application\Dtos\FirebaseNotification;
 use Application\Dtos\FirebaseNotificationData;
 use Application\Helpers\AppHelper;
+use Application\Helpers\TenantHelper;
 use Application\Models\Call;
 use Application\Models\Language;
 use Application\Models\Meeting;
@@ -50,7 +51,8 @@ trait EntityTrait
             'meeting_id' => $meetingProvider->getMeetingId(),
             'meeting_url' => $meetingProvider->getAdvisorMeetingUrl(),
 //            'meeting_type' => $type == Call::ENTITY_TYPE ? AppHelper::ZOOM_PROVIDER : AppHelper::getDefaultMeetingProvider()
-            'meeting_type' => AppHelper::getDefaultMeetingProvider()
+            'meeting_type' => AppHelper::getDefaultMeetingProvider(),
+            'tenant_id' => TenantHelper::getId()
         ]);
 
         // user service started.

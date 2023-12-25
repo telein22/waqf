@@ -190,10 +190,6 @@ class Auth extends MainController
 
         $formValidator = FormValidator::instance("register");
         $formRules = [
-            'type' => [
-                'type' => 'string',
-                'required' => true,
-            ],
             'username' => [
                 'required' => true,
                 'type' => 'string',
@@ -253,7 +249,6 @@ class Auth extends MainController
             'checkbox.required' => $lang('field_required'),
         ];
 
-        $isSubscriber = $request->post('type') == 'subscriber';
         if ($request->post('phone')) {
             $formRules['phone'] = [
                 'required' => true,
@@ -300,7 +295,7 @@ class Auth extends MainController
                     'email' => $formValidator->getValue('email'),
                     'name' => $name,
                     'password' => password_hash($pass, PASSWORD_DEFAULT),
-                    'type' => $request->post('type') ?? 'subscriber',
+                    'type' => 'subscriber',
                     'joined_at' => time(),
                     'lastactive' => time(),
                     'account_verified' => 0,

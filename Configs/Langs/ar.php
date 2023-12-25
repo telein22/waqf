@@ -853,7 +853,7 @@ return [
     'select_workshop' => 'أختر جلسة',
 
     'inv_title' => 'فاتورة اشتراك',
-    'inv_company_title' => 'منصة تيلي إن',
+    'inv_company_title' => 'منصة الوقف العلمي',
     'inv_registration_no' => 'رقم السجل التجاري',
     'inv_invoice_to' => 'فاتورة إلى',
     'inv_invoice_no' => 'رقم الفاتورة',

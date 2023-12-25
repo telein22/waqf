@@ -855,7 +855,7 @@ To add an appointment and session details to the calendar, click here',
     'select_workshop' => 'Select a workshop',
 
     'inv_title' => 'Participation invoice',
-    'inv_company_title' => 'Tele-in Platform',
+    'inv_company_title' => 'Waqf Platform',
     'inv_registration_no' => 'Registration Number',
     'inv_invoice_to' => 'Invoice to',
     'inv_invoice_no' => 'Invoice No',

@@ -39,7 +39,7 @@ $lang = Model::get('\Application\Models\Language');
 
 <table
         id="content"
-        style="min-height: 500px;width: 400px;border-spacing: 0; margin: 0 auto; background-color: #404AAB;  padding: 30px;">
+        style="min-height: 500px;width: 400px;border-spacing: 0; margin: 0 auto; background-color: #89c2a8;  padding: 30px;">
     <tr>
         <td style="padding-bottom: 30px; text-align: end;">
             <img src="<?= URL::asset('/Application/Assets/business_card_and_poster/dark.png')?>" alt="" style="width: 130px;">
@@ -70,7 +70,7 @@ $lang = Model::get('\Application\Models\Language');
 
                 <tr>
                     <td style="text-align: center; padding: 30px 0;">
-                        <h1 style="margin: 5px 0;font-size: 32px; font-weight: bold; color: #434CA2;"><?=  $user['name']; ?></h1>
+                        <h1 style="margin: 5px 0;font-size: 32px; font-weight: bold; color: #076939;"><?=  $user['name']; ?></h1>
 
 
 
@@ -83,7 +83,7 @@ $lang = Model::get('\Application\Models\Language');
                     <td style=" text-align: center;">
                         <img src="data:image/png;base64,<?= base64_encode(file_get_contents(URL::asset("Storage/BusinessCards/qr_code_profile_{$user['id']}.png"))); ?>" alt="" style="    width: 130px;
                     height: 130px;">
-                        <p style="font-size: 16px; font-weight: 400; color: #434CA2; margin-top: 0px; margin-bottom: 0;"><?= $user['username'] ?>@</p>
+                        <p style="font-size: 16px; font-weight: 400; color: #076939; margin-top: 0px; margin-bottom: 0;"><?= $user['username'] ?>@</p>
                     </td>
 
 

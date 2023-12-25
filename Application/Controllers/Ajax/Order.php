@@ -4,6 +4,7 @@ namespace Application\Controllers\Ajax;
 
 use Application\Helpers\OrderHelper;
 use Application\Helpers\PaymentHelper;
+use Application\Helpers\TenantHelper;
 use Application\Helpers\WorkshopHelper;
 use Application\Main\AuthController;
 use Application\Main\ResponseJSON;
@@ -104,6 +105,7 @@ class Order extends AuthController
         }
 
         $finalAmount = $payable - PaymentHelper::getGetWayPercentageCut($payable, $method);
+        $tenantId = TenantHelper::getId();
 
         $orderM = Model::get(OrderModel::class);
         $order = $orderM->create([
@@ -124,7 +126,8 @@ class Order extends AuthController
             'payment_method' => $method,
             'in_hold' => 0,
             'created_at' => time(),
-            'remark' => ''
+            'remark' => '',
+            'tenant_id' => $tenantId
         ]);
 
         
